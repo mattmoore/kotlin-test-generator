@@ -4,21 +4,47 @@ The goal of this Arrow Meta plugin is to support pattern matching in Kotlin.
 
 ## What is Pattern Matching?
 
-Without pattern matching:
+_Before:_
 
 ```kotlin
+val x = 1
+
 when (x) {
-    is Int -> //...
+    42 -> //...
     is Any -> //...
 }
 ```
 
-With pattern matching:
+_After:_
 
 ```kotlin
+val x = 1
+
 when (x) {
-    Int -> //...
-    _ -> //...
+    2 -> //...
+    is _ -> //...
+}
+```
+
+## With Tuples
+
+_Before:_
+
+```kotlin
+val pair = Pair(1, 2)
+
+when (pair) {
+    is Pair<Int, Int> -> //...
+}
+```
+
+_After:_
+
+```kotlin
+val pair = Pair(1, 2)
+
+when (pair) {
+    is Pair(_, 2) -> //...
 }
 ```
 
