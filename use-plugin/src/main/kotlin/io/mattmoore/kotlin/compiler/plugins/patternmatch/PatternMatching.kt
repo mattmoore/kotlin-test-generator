@@ -9,10 +9,10 @@ fun main() {
 //        x is Any && x == 2 -> println("TEST")
 //    }
 
-    when (x) {
-        1 -> println("exact match")
-        is _ -> println("wildcard match")
-    }
+//    when (x) {
+//        1 -> println("exact match")
+//        is _ -> println("wildcard match")
+//    }
 
     // Rewritten as:
 
@@ -30,8 +30,8 @@ fun main() {
 
     // with pairs:
 
-//    val y = Pair(1, 2)
-//
+    val y = Pair(1, 2)
+
 //    when (y) {
 //        is Pair<Any, Int> -> println("exact match")
 //        is Pair(_, 2) -> println("wildcard match")
@@ -39,7 +39,7 @@ fun main() {
 
     // rewrite:
 
-//    when {
-//        y is Pair<Any, Int> && (y.second == 2) -> println("wildcard match rewritten")
-//    }
+    when {
+        y is Pair<Int, Int> && y.second == 2 -> println("wildcard match rewritten")
+    }
 }

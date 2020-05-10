@@ -8,7 +8,7 @@ A [KEEP](https://github.com/Kotlin/KEEP/pull/213) for pattern matching was submi
 
 I have just begun this project on May 8, 2020. I have yet to see just how far I can get using the latest version of Arrow Meta (1.3.61 as of this time).
 
-Currently, I have a very simple example where `_` matching works for simple type checks. Of course, this is not very useful. There are problems with constructor-style matching on values vs types that I have yet to come up with a working solution for.
+Currently, I have a very simple example where `_` matching works for simple types. Of course, this is not very useful. There are problems with constructor-style matching on values vs types that I have yet to come up with a working solution for.
 
 The bottom line is this is a research plugin and should not be used for production any time soon.
 
@@ -45,8 +45,8 @@ _Before:_
 ```kotlin
 val pair = Pair(1, 2)
 
-when (pair) {
-    is Pair<Int, Int> -> //...
+when {
+    pair is Pair<Int, Int> && y.second == 2 -> //...
 }
 ```
 
