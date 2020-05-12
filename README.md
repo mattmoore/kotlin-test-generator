@@ -4,6 +4,8 @@ The goal of this Arrow Meta plugin is to support pattern matching in Kotlin, sim
 
 A [KEEP](https://github.com/Kotlin/KEEP/pull/213) for pattern matching was submitted. I don't know how long it will take to get this proposal accepted and implemented. Subsequently, since I've been wanting to see how easy it would be to add pattern matching via Arrow Meta, I decided to start work on that.
 
+Feel free to join us on the Kotlinlang Slack channel [#pattern-matching](https://kotlinlang.slack.com/archives/C013CRWEG74).
+
 ## State of this Project
 
 I have just begun this project on May 8, 2020. I have yet to see just how far I can get using the latest version of Arrow Meta (1.3.61 as of this time).
