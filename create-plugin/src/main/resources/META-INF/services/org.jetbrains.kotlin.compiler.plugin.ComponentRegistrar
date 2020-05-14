@@ -1,1 +1,1 @@
-io.mattmoore.kotlin.compiler.plugins.patternmatch.MetaPlugin
+io.mattmoore.kotlin.compiler.plugins.testgenerator.MetaPlugin
